@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "f958fd67-0ea1-4a4e-aa3a-2bc9b6d13f4c",
+		"name": "Spring MVC with REST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2455465",
+		"_collection_link": "https://interstellar-astronaut-350105.postman.co/workspace/My-WorkspaceMain~3a139893-d49b-4aa0-8c4d-f78af1d74b59/collection/2455465-f958fd67-0ea1-4a4e-aa3a-2bc9b6d13f4c?action=share&source=collection_link&creator=2455465"
+	},
+	"item": [
+		{
+			"name": "Get All Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/Spring_MVC_RestAPI/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"Spring_MVC_RestAPI",
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get  Employee by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/Spring_MVC_RestAPI/api/employees/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"Spring_MVC_RestAPI",
+						"api",
+						"employees",
+						"13"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete  Employee by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/Spring_MVC_RestAPI/api/employees/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"Spring_MVC_RestAPI",
+						"api",
+						"employees",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get  Employee by incorrect ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/Spring_MVC_RestAPI/api/employees/222222",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"Spring_MVC_RestAPI",
+						"api",
+						"employees",
+						"222222"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get  Employee by Wrong ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8084/Spring_MVC_RestAPI/api/employees/AAAAAA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"Spring_MVC_RestAPI",
+						"api",
+						"employees",
+						"AAAAAA"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New Employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"John\",\r\n    \"surname\": \"Doe\",\r\n    \"department\": \"HR\",\r\n    \"salary\": 50000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/Spring_MVC_RestAPI/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"Spring_MVC_RestAPI",
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 10,\r\n    \"name\": \"John_UP\",\r\n    \"surname\": \"Doe_UP\",\r\n    \"department\": \"IT\",\r\n    \"salary\": 5555\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8084/Spring_MVC_RestAPI/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8084",
+					"path": [
+						"Spring_MVC_RestAPI",
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

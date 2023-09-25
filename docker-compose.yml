@@ -1,0 +1,29 @@
+# Use root/example as user/password credentials
+version: '3.7'
+
+services:
+  db:
+    image: mysql:8.0.21
+    restart: always
+    container_name: mysql_db
+    environment:
+      MYSQL_ROOT_PASSWORD: springcourse
+      MYSQL_DATABASE: my_db
+      MYSQL_USER: bestuser
+      MYSQL_PASSWORD: bestuser
+    ports:
+      - 3306:3306
+    volumes:
+      - my-db:/var/lib/mysql
+
+  adminer:
+    image: adminer:latest
+    restart: always
+    container_name: adminer_ui
+    environment:
+      ADMINER_DEFAULT_SERVER: db
+    ports:
+    # http://localhost:8085/
+      - 8085:8080
+volumes:
+  my-db:
